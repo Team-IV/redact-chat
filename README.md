@@ -1,2 +1,2 @@
 # terminal-chat
-text based chat application
+Text based chat application
