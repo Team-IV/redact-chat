@@ -2,5 +2,6 @@
 Text based chat application
 
 # TODO
-Enable TLS
-Additional things I can't think of now...
+[ ] Implement TLS
+[ ] Add additional things I can't think of now...
+
