@@ -17,6 +17,18 @@ type Message struct {
 	Text string `json:"text"`
 }
 
+func ShowLogo() {
+	fmt.Println("")
+	fmt.Println("")
+	fmt.Println("██████╗ ███████╗██████╗  █████╗  ██████╗████████╗       ██████╗██╗  ██╗ █████╗ ████████╗")
+	fmt.Println("██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔════╝╚══██╔══╝      ██╔════╝██║  ██║██╔══██╗╚══██╔══╝")
+	fmt.Println("██████╔╝█████╗  ██║  ██║███████║██║        ██║   █████╗██║     ███████║███████║   ██║   ")
+	fmt.Println("██╔══██╗██╔══╝  ██║  ██║██╔══██║██║        ██║   ╚════╝██║     ██╔══██║██╔══██║   ██║   ")
+	fmt.Println("██║  ██║███████╗██████╔╝██║  ██║╚██████╗   ██║         ╚██████╗██║  ██║██║  ██║   ██║   ")
+	fmt.Println("╚═╝  ╚═╝╚══════╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝   ╚═╝          ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ")
+	fmt.Println("Made with ❤ by @iob_j")
+}
+
 var (
 	port = flag.String("port", "9000", "ws connection port")
 )
@@ -36,7 +48,7 @@ func mockedIP() string {
 
 func main() {
 	flag.Parse()
-
+	ShowLogo()
 	ws, err := connect()
 	if err != nil {
 		log.Fatal(err)
@@ -51,7 +63,7 @@ func main() {
 				fmt.Println("Can't obtain message: ", err.Error())
 				break
 			}
-			fmt.Println("Message: ", m)
+			fmt.Println("Redacted User: ", m)
 		}
 	}()
 
