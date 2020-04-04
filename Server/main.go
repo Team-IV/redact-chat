@@ -101,6 +101,7 @@ func server(port string) error {
 }
 
 func main() {
+	fmt.Println("Main chat server is now running!")
 	flag.Parse()
 	log.Fatal(server(*port))
 }
