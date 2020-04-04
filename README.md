@@ -1,4 +1,4 @@
-# terminal-chat
+# Terminal-chat
 Text based chat application
 
 # TO-DO List
